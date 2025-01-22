@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sekolah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <!-- Lonceng Notifikasi -->
+        <div class="notification-container">
+            <button id="notification-bell" class="notification-bell">
+                🔔
+            </button>
+            <div id="notification-list" class="notification-list">
+                <!-- Notifikasi akan muncul di sini -->
+                <p>Tidak ada notifikasi baru</p>
+            </div>
+        </div>
+
+        <h1>Dashboard Sekolah</h1>
+        <!-- Tombol Dark Mode -->
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+    <main class="main-content">
+        <h2>Selamat Datang!</h2>
+        <p>Pilih fitur yang ingin diakses:</p>
+        <div class="link-container">
+            <a href="Profile.html" class="btn">Profil Sekolah</a>
+            <a href="forum.html" class="btn">Perkumpulan</a>
+            <a href="login_library.html" class="btn">E-Library</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Sekolah Kita. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="darkmode.js"></script>
+    <script src="notifications.js"></script> <!-- File untuk logika lonceng -->
+</body>
+</html>

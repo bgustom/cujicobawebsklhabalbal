@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organisasi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Selamat datang di Organisasi</h1>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <main>
+        <p>Konten khusus Organisasi di sini.</p>
+
+        <!-- Tombol untuk masuk ke Minesweeper -->
+        <!-- Link Kembali ke Login -->
+        <a href="login_organisasi.html" class="btn">Kembali ke Login</a>
+    </main>
+
+    <footer>
+        <p>© 2025 Web Sekolah</p>
+    </footer>
+
+    <script>
+        // Memeriksa apakah user sudah login
+        const userType = localStorage.getItem("userType");
+
+        if (userType !== "organisasi") {
+            alert("Anda tidak memiliki akses ke halaman ini!");
+            window.location.href = "login_organisasi.html"; // Redirect ke halaman login jika tidak punya akses
+        } else {
+            // Jika login berhasil, tampilkan tombol Masuk ke Minesweeper
+            document.getElementById("enter-minesweeper").style.display = "block";
+        }
+
+        // Aksi tombol Masuk ke Minesweeper
+        document.getElementById("enter-minesweeper").addEventListener("click", function () {
+            window.location.href = "mnswp.html"; // Redirect ke halaman Minesweeper
+        });
+    </script>
+    <script src="darkmode.js"></script>
+</body>
+</html>
